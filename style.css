@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap');
+
+body{
+    margin: 0;
+    padding: 8px 8px 0 8px;
+    background-color: black;
+}
+
+
+.box-wrapper{
+    display: flex;
+    height: 80vh;
+    gap: 8px;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+.wrapper-sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 8px;
+}
+.box1,.box2,.box3{
+    background-color: #121313;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+.box1{
+    min-height: 70px;
+    padding: 20px 0 20px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: first baseline;
+    font-weight: 500;
+
+    p{
+        display: flex;
+        gap: 20px;
+    }   
+    i{
+        font-size: 20px;
+    } 
+}
+.box2{
+    min-height: 415px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+
+    svg{
+        width: 24px;
+        height: 24px;
+        color: gray;
+    }
+
+    .library-tag{
+        display: flex;
+        justify-content:space-between;
+        align-items: first baseline;
+        width: 100%;
+
+        p{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            fill: gray;
+            color: gray;
+            font-weight: 600;
+        }
+
+        .fa-solid{
+            position: relative;
+            top: -4px;
+        }
+    }
+
+    .wrapper-genre-cards{
+        width: 100%;
+        display: flex;
+        gap: 10px;
+
+        .genre-card{
+            background: #222322;
+            border-radius: 20px;
+            height: 20px;
+            width: fit-content;
+            padding: 5px 12px 5px 12px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .wrapper-scroller{
+        height: 100%;
+        margin: 20px 5px 0 5px;
+        color: #a7a7a7;
+        font-size: 14px;
+
+        .scroller-topper{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wrapper-album{
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            overflow: hidden;
+
+            &:hover{
+                overflow-y: scroll;
+            }
+
+            .inside-wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .album-content{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+                height: 55px;
+
+                .inner-album{
+                    padding: 5px;
+                }
+
+                &:hover{
+                    background-color: #282828;
+                }
+            }  
+        }
+
+        img{
+            height: 52px;
+            width: 52px;
+            border-radius: 3px;
+        }
+    }
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #121212; /* Change this to the color you want for the track */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #898888; /* Adjust the color as needed */
+}
+.box3{
+    min-height: 530px;
+    width: 70%;
+}
+.now-playing-bar {
+    color: white;
+    height: 10vh;
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+.box3{
+
+    padding: 10px 20px 10px 20px;
+    overflow: hidden;
+
+    &:hover{
+        overflow-y: scroll;
+    }
+
+    .top-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        position: fixed;
+        
+        .side-arrows{
+            display: flex;
+            gap: 10px;
+
+            .arrow-bg{
+                background-color: #212121;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                border-radius: 50%;
+            }
+        }
+
+        .side-rightbar{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            position: fixed;
+            right: 40px;
+
+            .explore-premium{
+                background-color: #fefffe;
+                padding: 8px 15px 8px 15px;
+                border-radius: 20px;
+                color: black;
+
+                &:hover{
+                    scale: 1.05;
+                }
+            }
+
+            .install{
+                background-color: black;
+                color: white;
+                padding: 8px 15px 8px 15px;
+                border-radius: 20px;
+
+                &:hover{
+                    scale: 1.05;
+                }
+            }
+
+            .bell{
+                padding: 8px 11px 8px 11px;
+                border-radius: 20px;
+                background-color: black;
+
+                &:hover{
+                    scale: 1.05;
+                }
+            }
+
+            .user{
+                padding: 8px 12px 8px 12px;
+                border-radius: 20px;
+                background-color: #f472a0;
+                color: black;
+
+                &:hover{
+                    scale: 1.05;
+                }
+            }
+        }
+    }
+
+    .card{
+        display: flex;
+        gap: 25px;
+    }
+
+    .cards{
+        padding: 15px;
+        background-color: #181919;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 20px;
+
+        &:hover{
+            background-color: #282828;
+            transition: 0.3s;
+        }
+
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        img{
+            height: 160px;
+            width: 160px;
+            border-radius: 5px;
+        }
+    }
+}
