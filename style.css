@@ -45,7 +45,7 @@ body{
     } 
 }
 .box2{
-    min-height: 415px;
+    min-height: 412px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
